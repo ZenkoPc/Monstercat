@@ -1,0 +1,87 @@
+[
+    {
+        "id": 1,
+        "title": "The Small Things",
+        "autor": "Conro",
+        "duration": "3:35",
+        "route": "audio/Believer.mp3"
+    },
+    {
+        "id": 2,
+        "title": "Without Your Love",
+        "autor": "Conro",
+        "duration": "3:08",
+        "route": "audio/BohemianRhapsody.mp3"
+    },
+    {
+        "id": 3,
+        "title": "Therapy",
+        "autor": "Conro",
+        "duration": "3:06",
+        "route": "audio/Centuries.mp3"
+    },
+    {
+        "id": 4,
+        "title": "Fighters",
+        "autor": "Conro",
+        "duration": "3:46",
+        "route": "audio/Dontlookbackinanger.mp3"
+    },
+    {
+        "id": 5,
+        "title": "Way Up",
+        "autor": "Conro & Nerve",
+        "duration": "3:32",
+        "route": "audio/Feelgoodinc.mp3"
+    },
+
+    {
+        "id": 6,
+        "title": "Waiting",
+        "autor": "Conro",
+        "duration": "3:07",
+        "route": "audio/Feelinvincible.mp3"
+    },
+    {
+        "id": 7,
+        "title": "Dreaming",
+        "autor": "Conro",
+        "duration": "2:57",
+        "route": "audio/Happytogether.mp3"
+    },
+    {
+        "id": 8,
+        "title": "Tatto",
+        "autor": "Conro",
+        "duration": "3:29",
+        "route": "audio/It_stime.mp3"
+    },
+    {
+        "id": 9,
+        "title": "Out for the Night",
+        "autor": "Conro",
+        "duration": "3:05",
+        "route": "audio/Itsmylife.mp3"
+    },
+    {
+        "id": 10,
+        "title": "Overdue",
+        "autor": "Conro",
+        "duration": "2:48",
+        "route": "audio/Lightemup.mp3"
+    },
+    {
+        "id": 11,
+        "title": "Say It",
+        "autor": "Conro",
+        "duration": "3:04",
+        "route": "audio/Livinonaprayer.mp3"
+    },
+    {
+        "id": 12,
+        "title": "Here to Stay",
+        "autor": "Conro",
+        "duration": "2:44",
+        "route": "audio/Demons.mp3"
+    }
+]

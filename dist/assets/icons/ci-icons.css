@@ -1,0 +1,89 @@
+@font-face {
+    font-family: "ci-icons";
+    src: url("./ci-icons.woff?07fb33b80dae1794f9a1f77f22ecb084") format("woff"),
+url("./ci-icons.woff2?07fb33b80dae1794f9a1f77f22ecb084") format("woff2");
+}
+
+[class^="ci--"]:before, [class*=" ci--"]:before {
+    font-family: ci-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ci--simbolo-mayor-que.png:before {
+    content: "\e000";
+}
+.ci--x.png:before {
+    content: "\e001";
+}
+.ci--code-labs:before {
+    content: "\e002";
+}
+.ci--menu:before {
+    content: "\e003";
+}
+.ci--instagram:before {
+    content: "\e004";
+}
+.ci--tiktok:before {
+    content: "\e005";
+}
+.ci--twitter:before {
+    content: "\e006";
+}
+.ci--twitch:before {
+    content: "\e007";
+}
+.ci--facebook:before {
+    content: "\e008";
+}
+.ci--discord:before {
+    content: "\e009";
+}
+.ci--player:before {
+    content: "\e00a";
+}
+.ci--play:before {
+    content: "\e00b";
+}
+.ci--pause:before {
+    content: "\e00c";
+}
+.ci--compartir:before {
+    content: "\e00d";
+}
+.ci--bandcamp:before {
+    content: "\e00e";
+}
+.ci--soundcloud:before {
+    content: "\e00f";
+}
+.ci--apple:before {
+    content: "\e010";
+}
+.ci--youtube:before {
+    content: "\e011";
+}
+.ci--spotify:before {
+    content: "\e012";
+}
+.ci--triller:before {
+    content: "\e013";
+}
+.ci--send-arrow:before {
+    content: "\e014";
+}
+.ci--logo:before {
+    content: "\e015";
+}
+.ci--close:before {
+    content: "\e016";
+}
+.ci--greater:before {
+    content: "\e017";
+}

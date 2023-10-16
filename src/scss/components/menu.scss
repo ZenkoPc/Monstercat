@@ -1,0 +1,189 @@
+@use '../config/colors.scss' as colors;
+@use '../mixins/media-breaks.scss' as mixins;
+
+.Mask{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    width: 0%;
+    z-index: 0;
+    transition: all .3s;
+
+    &.is-visible{
+        z-index: 5;
+        width: 100%;
+    }
+}
+
+.Aside{
+    width: 0%;
+    height: 100%;
+    background-color: colors.$black;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    transition: all .3s;
+
+    &.is-visible{
+        width: 26%;
+        z-index: 10;
+        padding: rempi(30);
+
+        @include mixins.media-max-width(1130){
+            width: 42%;
+        }
+
+        @include mixins.media-max-width(970){
+            width: 55%;     
+        }
+
+        @include mixins.media-max-width(600){
+            width: 100%; 
+        }
+    }
+
+    &-top{
+        color: colors.$white;
+        display: flex;
+        justify-content: space-between;
+
+        button{
+            font-size: rempi(20);
+        }
+    }
+
+    &-logo{
+
+        img{
+            min-width: rempi(180);
+            max-width: rempi(180);
+        }
+    }
+
+    &-content{
+        height: 73%;
+        width: 100%;
+        font-weight: 600;
+        margin-top: 13%;
+        font-size: rempi(19);
+        letter-spacing: rempi(1);
+        word-spacing: rempi(4);
+        overflow-y: scroll;
+
+        @include mixins.media-max-width(325){
+            height: 59%;
+            margin-bottom: rempi(45);    
+        }
+
+        &::-webkit-scrollbar{
+            width: rempi(5);
+            color: colors.$black;
+        }
+
+        &::-webkit-scrollbar-thumb{
+            background-color: lighten(colors.$primary,50%);
+        }
+
+        & > ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: rempi(20);
+
+            & > li{
+                color: colors.$white;
+                text-transform: uppercase;
+
+                button{
+                    text-transform: uppercase;
+                    letter-spacing: rempi(1);
+                    word-spacing: rempi(4);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: rempi(13);
+                    transition: all .3s;
+        
+                    span{
+                        font-size: rempi(11);
+                    }
+
+                    &.transformed{
+
+                        transition: all .3s;
+
+                        span{
+                            transform: rotate(-90deg);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    &-menu{
+         padding: rempi(20);
+         display: none;
+
+         & > ul{
+            display: flex;
+            flex-direction: column;
+            gap: rempi(10);
+            font-size: rempi(16);
+            color: lighten(colors.$primary, 50%);
+
+        }
+
+        &.active{
+            display: block;
+        }
+    }
+
+    &-bottom{
+        color: colors.$white;
+        height: 15%;
+        padding-top: rempi(20);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    &-media{
+        font-size: rempi(23);
+        display: flex;
+        gap: rempi(15);
+        margin-bottom: rempi(20);
+    }
+
+    &-buttons{
+        display: flex;
+        gap: rempi(8);
+
+        a{
+            text-transform: uppercase;
+            padding: rempi(5) 0;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: rempi(17);
+
+            &:first-of-type{
+                border: 1px solid colors.$white;
+                min-width: rempi(110);
+                transition: all .3s;
+
+                &:hover{
+                    background-color: colors.$white;
+                    color: colors.$black;
+                }
+            }
+
+            &:last-of-type{
+                min-width: rempi(130);
+            }
+        }
+    }
+}

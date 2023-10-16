@@ -1,0 +1,177 @@
+@use '../config/colors.scss' as colors;
+@use '../mixins/media-breaks.scss' as mixins;
+
+.Footer{
+    color: colors.$white;
+    width: 80%;
+    margin: 0 auto;
+    padding: rempi(20) 0 rempi(70) 0;
+
+    @include mixins.media-max-width(1450){
+        width: 86%;      
+    }
+
+    @include mixins.media-max-width(1130){
+        width: 92%;      
+    }
+    
+    &-menu{
+        border-block: 1px solid colors.$white;
+        padding: rempi(60) 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        font-weight: 600;
+        font-size: rempi(25);
+
+        @include mixins.media-max-width(1130){
+            font-size: rempi(23);       
+        }
+
+        @include mixins.media-max-width(700){
+            grid-template-columns: 1fr;
+            font-size: rempi(20);     
+        }
+    }
+
+    &-info, &-privacy{
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        word-spacing: rempi(5);
+    }
+
+    &-newsletter{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include mixins.media-max-width(700){
+            margin-top: rempi(40);     
+        }
+
+    }
+
+    &-newsInfo{
+        h3{
+            text-transform: uppercase;
+            color: #898888;
+            letter-spacing: rempi(1);
+        }
+
+        p{
+            font-size: rempi(19);
+            max-width: 90%;
+            font-weight: 400;
+            margin: rempi(15) 0;
+            color: #e1e1e1;
+            font-style: italic;
+            letter-spacing: rempi(1);
+
+            @include mixins.media-max-width(1130){
+                font-size: rempi(17);       
+            }
+        }
+    }
+
+    &-disclaimer{
+        padding: rempi(40) 0;
+        display: flex;
+        justify-content: space-between;
+        font-size: rempi(19);
+        letter-spacing: rempi(1.2);
+
+        @include mixins.media-max-width(1130){
+            font-size: rempi(16);       
+        }
+
+        @include mixins.media-max-width(700){
+            flex-direction: column; 
+        }
+    }
+
+    &-copyright{
+        color: darken(#e1e1e1, 15%);
+        font-style: italic;
+
+        @include mixins.media-max-width(700){
+            font-size: rempi(18);
+            margin-bottom: rempi(10);
+            text-align: center;     
+        }
+
+        @include mixins.media-max-width(470){
+            font-size: rempi(15);    
+        }
+    }
+
+    &-contact{
+        display: flex;
+        gap: rempi(15);
+        font-size: rempi(25);
+
+        @include mixins.media-max-width(1130){
+            font-size: rempi(20);       
+        }
+
+        @include mixins.media-max-width(970){
+            display: inline-block;
+            font-size: rempi(23); 
+        }
+
+        @include mixins.media-max-width(700){
+            display: flex;
+            gap: rempi(20);
+            font-size: rempi(25); 
+            justify-content: center;   
+        }
+
+        @include mixins.media-max-width(470){
+            display: inline-block;
+            font-size: rempi(23);
+            margin: 0 auto;  
+        }
+    }
+
+    &-message{
+        margin: rempi(20) auto 0 auto;
+        width: 58%;
+        text-align: center;
+        font-size: rempi(13);
+        color: darken(#e1e1e1, 15%);
+
+        p:first-of-type{
+            margin-bottom: rempi(20);
+        }
+
+        @include mixins.media-max-width(1130){
+            width: 100%;       
+        }
+    }
+}
+
+.Form{
+    
+    &-group{
+        display: flex;
+
+        input{
+            width: 85%;
+            background-color: transparent;
+            border-bottom: 1px solid colors.$primary;
+            color: colors.$primary;
+            padding: rempi(10) 0 rempi(10) 0;
+            font-size: rempi(19);
+            font-weight: 400;
+        }
+
+        button{
+            border-bottom: 1px solid colors.$primary;
+            width: 15%;
+        }
+
+        span{
+            font-size: rempi(17);
+        }
+    }
+}

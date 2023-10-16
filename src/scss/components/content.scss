@@ -1,0 +1,627 @@
+@use '../config/colors.scss' as colors;
+@use '../mixins/media-breaks.scss' as mixins;
+
+.Album{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+
+    @include mixins.media-max-width(1450){
+        width: 86%;       
+    }
+
+    @include mixins.media-max-width(1130){
+        width: 92%;       
+    }
+
+    @include mixins.media-max-width(970){
+        width: 94%;      
+    }
+
+    @include mixins.media-max-width(755){
+        width: 95%;       
+    }
+    
+    &-content{
+        display: flex;
+        margin-top: rempi(200);
+
+        @include mixins.media-max-width(970){
+            flex-direction: column;  
+            width: 100%;  
+            margin-top: rempi(150);
+        }
+
+        @include mixins.media-max-width(550){
+            margin-top: rempi(120);   
+        }
+    }
+
+    &-asideInfo{
+        width: rempi(30);
+        transform: rotate(0deg);
+        display: flex;
+        align-items: center;
+
+        text-orientation: sideways-right;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        color: colors.$white;
+        font-size: rempi(18);
+        gap: rempi(10);
+        font-style: italic;
+
+        @include mixins.media-max-width(745){
+            transform: none;
+            text-orientation: initial;   
+            writing-mode: initial;
+            width: 100%;
+            margin-top: rempi(45);
+        }
+
+        span{
+            color: colors.$secondary;
+            font-weight: 700;
+        }
+
+    }
+
+    &-img{
+        width: rempi(640);
+
+        @include mixins.media-max-width(1450){
+            width: rempi(480); 
+            height:  rempi(460);    
+        }
+
+        @include mixins.media-max-width(1130){
+            width: rempi(420);       
+        }
+
+        @include mixins.media-max-width(970){
+            width: rempi(680);   
+            height: rempi(680);  
+        }
+
+        @include mixins.media-max-width(745){
+            width: 100%;  
+            height: rempi(660);
+        }
+
+        @include mixins.media-max-width(550){
+            height: rempi(500);     
+        }
+
+        @include mixins.media-max-width(450){
+            height: rempi(410);     
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-group{
+        display: flex;
+
+        @include mixins.media-max-width(970){
+            margin: 0 auto;   
+        }
+
+        @include mixins.media-max-width(745){
+            flex-direction: column-reverse;      
+            margin: 0; 
+        }
+    }
+
+    &-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: colors.$white;
+        margin-left: rempi(40);
+        padding: rempi(20);
+        text-transform: uppercase;
+
+        @include mixins.media-max-width(970){
+            align-items: flex-start;
+            margin-left: 0; 
+            margin-top: rempi(30);   
+            padding: 0;
+        }
+
+        & > h1{
+            font-size: rempi(60);
+            letter-spacing: rempi(5);
+            color: transparent;
+            font-weight: 700;
+            -webkit-text-stroke: rempi(2) colors.$white;
+
+            @include mixins.media-max-width(1290){
+                font-size: rempi(47);
+            }
+
+            @include mixins.media-max-width(970){   
+                color: colors.$white;   
+                font-weight: 500;
+                font-size: rempi(42);
+            }
+
+            @include mixins.media-max-width(550){
+                font-size: rempi(37);   
+            }
+
+            @include mixins.media-max-width(470){
+                font-size: rempi(28);    
+            }
+        }
+
+        & > h2{
+            font-weight: 800;
+            font-size: rempi(39);
+            letter-spacing: .5;
+            margin-top: rempi(-10);
+
+            @include mixins.media-max-width(1450){
+                font-size: rempi(35);
+            }
+
+            @include mixins.media-max-width(1290){
+                font-size: rempi(30);
+            }
+
+            @include mixins.media-max-width(970){
+                font-size: rempi(27);
+                font-weight: 600;
+                margin-top: 0;     
+            }
+
+            @include mixins.media-max-width(550){
+                font-size: rempi(24);    
+            }
+
+            @include mixins.media-max-width(550){
+                font-size: rempi(20);   
+            }
+        }
+    }
+
+    &-buttons{
+        display: flex;
+        gap: rempi(10);
+        margin-top: rempi(35);
+
+        & > .btn{
+            padding: rempi(15) 0;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: rempi(18);
+            letter-spacing: rempi(1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: rempi(10);
+            word-spacing: rempi(3);
+            transition: all .3s;
+
+            @include mixins.media-max-width(970){
+                padding: rempi(13) 0;
+            }
+
+            &:first-of-type{
+                background-color: colors.$secondary;
+                min-width: rempi(220);
+
+                @include mixins.media-max-width(470){
+                    font-size: rempi(15); 
+                }
+
+                @include mixins.media-max-width(410){
+                    min-width: rempi(190);    
+                }
+
+                @include mixins.media-max-width(335){
+                    min-width: rempi(160);  
+                }
+
+                &:hover{
+                    background-color: colors.$white;
+                    color: colors.$black
+                }
+
+                &.is-hidden{
+                    display: none;
+                }
+            }
+
+            &:nth-child(2){
+                background-color: colors.$secondary;
+                display: none;
+                min-width: rempi(220);
+
+                @include mixins.media-max-width(470){
+                    font-size: rempi(15);    
+                }
+
+                @include mixins.media-max-width(410){
+                    min-width: rempi(190);   
+                }
+
+                @include mixins.media-max-width(335){
+                    min-width: rempi(160);   
+                }
+
+                &:hover{
+                    background-color: colors.$white;
+                    color: colors.$black
+                }
+
+                &.is-visible{
+                    display: flex;
+                }
+            }
+
+            &:last-of-type{
+                border: 1px solid colors.$white;
+                min-width: rempi(160);
+
+                @include mixins.media-max-width(470){
+                    font-size: rempi(15);    
+                }
+
+                @include mixins.media-max-width(410){
+                    min-width: rempi(130);    
+                }
+
+                @include mixins.media-max-width(335){
+                    min-width: rempi(110); 
+                }
+
+                &:hover{
+                    background-color: colors.$white;
+                    color: colors.$black
+                }
+            }
+        }
+    }
+}
+
+.Stream{
+    width: 80%;
+    margin: rempi(95) auto rempi(65) auto;
+    color: colors.$white;
+
+    @include mixins.media-max-width(1450){
+        width: 86%;                  
+    }
+
+    @include mixins.media-max-width(1130){
+        width: 92%;       
+    }
+
+    @include mixins.media-max-width(470){
+        margin-top: rempi(70);   
+    }
+
+    & > h2{
+        font-weight: 600;
+        font-size: rempi(60);
+        letter-spacing: rempi(3);
+        word-spacing: rempi(5);
+        text-transform: uppercase;
+
+        @include mixins.media-max-width(1450){
+            font-size: rempi(50);              
+        }
+
+        @include mixins.media-max-width(970){
+            font-size: rempi(42);       
+        }
+
+        @include mixins.media-max-width(550){
+            font-size: rempi(37);     
+        }
+
+        @include mixins.media-max-width(470){
+            font-size: rempi(28);    
+        }
+
+        @include mixins.media-max-width(425){
+            font-size: rempi(26);
+            font-weight: 700;    
+        }
+
+    }
+
+    &-options{
+        display: flex;
+        margin-top: rempi(40);
+
+        @include mixins.media-max-width(420){
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;   
+        }
+
+        @include mixins.media-max-width(330){
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;  
+        }
+    }
+
+    &-option{
+        border: 1px solid colors.$white;
+        display: flex;
+        min-width: rempi(70);
+        justify-content: center;
+        align-items: center;
+        padding: rempi(20);
+        text-align: center;
+        font-size: rempi(15);
+        text-transform: uppercase;
+        letter-spacing: rempi(4);
+        font-weight: 600;
+
+        @include mixins.media-max-width(550){
+            min-width: rempi(50);
+            padding: rempi(10) rempi(15);     
+        }
+
+        @include mixins.media-max-width(470){
+            padding: rempí(8);
+            font-size: rempi(15);
+        }
+
+        @include mixins.media-max-width(470){
+            font-size: rempi(12);  
+            padding: rempi(10);  
+        }
+
+        span{
+            font-size: rempi(25);
+
+            @include mixins.media-max-width(470){
+                font-size: rempi(17);    
+            }
+
+            @include mixins.media-max-width(470){
+                font-size: rempi(15);    
+            }
+        }
+    }
+}
+
+.List{
+    width: 80%;
+    margin: 0 auto rempi(60) auto;
+    color: colors.$white;
+    font-size: rempi(23);
+
+    @include mixins.media-max-width(1450){
+        width: 86%;                  
+    }
+
+    @include mixins.media-max-width(1130){
+        width: 92%;       
+    }
+
+    @include mixins.media-max-width(470){
+        margin-bottom: rempi(40);    
+    }
+
+    & > h2{
+        font-weight: 600;
+        font-size: rempi(60);
+        letter-spacing: rempi(3);
+        word-spacing: rempi(5);
+        text-transform: uppercase;
+        margin-bottom: rempi(20);
+
+        @include mixins.media-max-width(1450){
+            font-size: rempi(50);              
+        }
+
+        @include mixins.media-max-width(1130){
+            font-size: rempi(46);     
+        }
+
+        @include mixins.media-max-width(970){
+            font-size: rempi(42);       
+        }
+
+        @include mixins.media-max-width(550){
+            font-size: rempi(37);   
+        }
+
+        @include mixins.media-max-width(470){
+            font-size: rempi(28); 
+        }
+
+        @include mixins.media-max-width(425){
+            font-size: rempi(26);    
+        }
+    }
+
+    &-info{
+        width: 100%;
+        margin-top: rempi(60);
+
+        @include mixins.media-max-width(470){
+            margin-top: rempi(35);   
+        }
+    }
+
+    &-id{
+        width: 5%;
+
+        @include mixins.media-max-width(970){
+            width: 7%;   
+        }
+
+        @include mixins.media-max-width(550){
+            width: 8%;
+        }
+
+        @include mixins.media-max-width(470){
+            font-size: rempi(17);    
+        }
+
+        @include mixins.media-max-width(420){
+            width: 10%;    
+        }
+    }
+
+    &-play{
+        width: 5%;
+
+        @include mixins.media-max-width(970){
+            width: 7%;     
+        }
+
+        @include mixins.media-max-width(550){
+            width: 9%;   
+        }
+
+        @include mixins.media-max-width(470){
+            font-size: rempi(17);    
+        }
+
+        @include mixins.media-max-width(420){
+            width: 13%;    
+        }
+
+        button{
+            &:first-of-type{
+                 &.is-hidden{
+                    display: none;
+                 }
+            }
+
+            &:last-of-type{
+                display: none;
+
+                &.is-visible{
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &-title{
+        width: 70%;
+        font-size: rempi(18);
+
+        @include mixins.media-max-width(420){
+            width: 60%;  
+        }
+
+        @include mixins.media-max-width(550){
+            font-size: rempi(15);   
+        }
+
+        &Info{
+            display: flex;
+            flex-direction: column;
+
+            span{
+                &:first-of-type{
+                    font-size: rempi(20);
+                    font-weight: 600;
+
+                    @include mixins.media-max-width(470){
+                        font-size: rempi(17);    
+                    }
+                }
+
+                &:last-of-type{
+                    line-height: .9;
+                }
+            }
+        }
+    }
+
+    &-time{
+        font-size: rempi(20);
+
+        @include mixins.media-max-width(550){
+            width: 15%;
+        }
+
+        @include mixins.media-max-width(470){
+            font-size: rempi(17);    
+        }
+
+    }
+
+    &-share{
+        @include mixins.media-max-width(470){
+            font-size: rempi(17);    
+        }
+
+        @include mixins.media-max-width(420){
+            width: 10%;
+        }
+    }
+
+}
+
+.space{
+    height: rempi(30);
+}
+
+.Video{
+    width: 80%;
+    margin: 0 auto rempi(120) auto;
+    color: colors.$white;
+
+    @include mixins.media-max-width(1450){
+        width: 86%;                  
+    }
+
+    @include mixins.media-max-width(1130){
+        width: 92%;       
+    }
+
+    @include mixins.media-max-width(470){
+        margin-bottom: rempi(70);  
+    }
+
+    & > h2{
+        font-weight: 600;
+        font-size: rempi(60);
+        letter-spacing: rempi(3);
+        word-spacing: rempi(5);
+        text-transform: uppercase;
+        margin-bottom: rempi(20);
+
+        @include mixins.media-max-width(1450){
+            font-size: rempi(50);              
+        }
+
+        @include mixins.media-max-width(970){
+            font-size: rempi(42);       
+        }
+
+        @include mixins.media-max-width(550){
+            font-size: rempi(37);    
+        }
+
+        @include mixins.media-max-width(470){
+            font-size: rempi(28);    
+        }
+    }
+
+    iframe{
+        @include mixins.media-max-width(970){
+            height: rempi(400);      
+        }
+
+        @include mixins.media-max-width(470){
+            height: rempi(300);   
+        }
+
+        @include mixins.media-max-width(400){
+            height: rempi(200);   
+        }
+    }
+}

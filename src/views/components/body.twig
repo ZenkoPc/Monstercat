@@ -1,0 +1,86 @@
+{% block body %}
+    <section class="Album">
+        <div class="Album-content">
+            <div class="Album-group">
+            <div class="Album-asideInfo">
+    
+                <span>Instinct</span>
+                - Released May 22, 2020
+                
+            </div>
+            <div class="Album-img">
+                <img src="{{public('img/album.jpg')}}" alt="Album-img">
+            </div>
+            </div>
+            <div class="Album-info">
+                <h1>Level Days</h1>
+                <h2>Conro</h2>
+                <div class="Album-buttons">
+                    <button class="btn" id="music-play">
+                        <span class="ci--play"></span>
+                        Listen Now
+                    </button>
+                    <button class="btn" id="music-pause">
+                        <span class="ci--pause"></span>
+                        Listen Now
+                    </button>
+                    <button class="btn" id="music-share" data-toggle="shareMusic">
+                        <span class="ci--compartir"></span>
+                        Share
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Stream">
+        <h2>Stream it your way</h2>
+        <div class="Stream-options">
+            <div class="Stream-option">
+                <a target="_blank" href="https://player.monstercat.app/release/MCLP017">
+                    <span class="ci--player"></span> Player
+                </a>
+            </div>
+            <div class="Stream-option">
+                <a target="_blank" href="https://monstercatmedia.bandcamp.com/album/level-days">
+                    <span class="ci--bandcamp"></span>
+                </a>
+            </div>
+            <div class="Stream-option">
+                <a target="_blank" href="https://soundcloud.com/monstercat/sets/conro-level-days">
+                    <span class="ci--soundcloud"></span>
+                </a>
+            </div>
+            <div class="Stream-option">
+                <a target="_blank" href="https://music.apple.com/ca/album/level-days/1508531211">
+                    <span class="ci--apple"></span>
+                </a>
+            </div>
+            <div class="Stream-option">
+                <a target="_blank" href="https://www.youtube.com/watch?v=7nObtWENgxA&list=PLyBpB3ighZijdaq0QsA77iQVvE39gJ9-U&index=2&t=0s">
+                    <span class="ci--youtube"></span>
+                </a>
+            </div>
+            <div class="Stream-option">
+                <a target="_blank" href="https://open.spotify.com/playlist/4vM8ONc8HQ9odCaEZTEv89?si=7DJVqY5dTJm6rfylntpAHg">
+                    <span class="ci--spotify"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <main class="List">
+        <h2>Track List</h2>
+        <table class="List-info">
+            <tbody id="Music-list">
+            </tbody>
+        </table>
+    </main>
+
+    <section class="Video">
+        <h2>Music video</h2>
+        <div class="Video-container">
+            <iframe width="100%" height="700" src="https://www.youtube.com/embed/7nObtWENgxA?si=d262vXfQS5uGNZYx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </section>
+{% endblock %}

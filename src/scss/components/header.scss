@@ -1,0 +1,120 @@
+@use '../config/colors.scss' as colors;
+@use '../mixins/media-breaks.scss' as mixins;
+
+.Header{
+
+    &-logo{
+        width: rempi(50);
+        position: fixed;
+        top: rempi(30);
+        left: 4%;
+
+        @include mixins.media-max-width(1450){
+            left: 2%;   
+        }
+
+        @include mixins.media-max-width(1129){
+            display: none;
+        }
+    }
+
+    &-secondary{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: transparentize(colors.$black, .2);
+        backdrop-filter: blur(rempi(3));
+        display: flex;
+        padding: rempi(10) rempi(15);
+
+        @include mixins.media-max-width(1129){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @include mixins.media-min-width(1130){
+            display: none;
+        }
+    }
+
+    &-secondaryLogo{
+
+        width: rempi(50);
+        height: rempi(50);
+
+        a{
+            width: 100%;
+            height: 100%;
+            margin-left: 0;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.Nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rempi(35);
+    position: fixed;
+    top: rempi(25);
+    right: 2%;
+
+    @include mixins.media-max-width(1129){
+        display: none;
+    }
+
+    &-menu{
+        span{
+            font-size: rempi(35);
+            color: colors.$white;
+        }
+    }
+
+    &-links{
+        display: flex;
+        flex-direction: column;
+        gap: rempi(10);
+
+        span{
+
+            font-size: rempi(25);
+            color: colors.$white;
+        }
+
+    }
+
+    &-secondary{
+        display: flex;
+        color: colors.$white;
+        flex-direction: row-reverse;
+        font-size: rempi(25);
+
+        @include mixins.media-min-width(1130){
+            display: none;
+        }
+
+        &Menu{
+            span{
+                font-size: rempi(35);
+                color: colors.$white;
+            }
+        }
+
+        &Links{
+            display: flex;
+            gap: rempi(15);
+
+            @include mixins.media-max-width(550){
+                display: none;
+            }
+        }
+    }
+}
